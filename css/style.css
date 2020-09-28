@@ -2,6 +2,15 @@
     --dark:#1a1a1a;
     --light: #ffffff;
 }
+html, body{
+    background-color: var(--dark);
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+section{
+    height: 100%;
+}
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #333;
