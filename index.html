@@ -43,9 +43,64 @@
         <!--Fin de la cabecera-->
         <main class="main">
             <div class="container">
-                <h1>Titulo web</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero deleniti accusantium facilis alias nobis nihil, architecto provident quia exercitationem laboriosam, non totam eos. Reprehenderit culpa cupiditate molestiae at. Beatae rem sapiente omnis architecto sed. Voluptatum cum autem pariatur molestiae eius sed at repellendus reiciendis ipsam, suscipit, vitae neque accusamus! Provident dolorum nobis ipsum libero itaque sit consequuntur ratione optio blanditiis eum recusandae, enim nulla, molestiae et rerum magni assumenda impedit earum rem fuga. Necessitatibus, quas. Earum eveniet, quidem corrupti corporis temporibus deserunt magnam est cum commodi vel aliquid animi saepe consequatur sed ducimus nihil sapiente quo ipsum ab minima laboriosam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio necessitatibus quisquam sequi animi cum rem, impedit molestias vel iste quis, excepturi unde esse natus! Asperiores praesentium nemo laborum mollitia cum ea alias assumenda a eaque iusto unde, at aliquid harum cumque ducimus voluptates delectus qui impedit minima laboriosam! Ratione quibusdam molestias tempora magni ullam excepturi atque magnam deleniti deserunt, alias voluptatem minus at totam iusto voluptas similique exercitationem voluptatum modi! Reprehenderit ipsa rem, necessitatibus molestiae laboriosam dolor quod. Minima, nostrum modi eaque vero, ad culpa magnam facere voluptates incidunt fugit sapiente rerum repudiandae! Culpa non aliquam earum nihil ipsum praesentium facere, et quas, totam ratione debitis dolorem nisi delectus dolore magnam iste veniam quod quam cumque. Similique, nisi temporibus quasi nesciunt consectetur labore vitae. Repellat sapiente voluptas, excepturi odit eos autem aliquam cum enim earum deleniti iusto esse quos vitae, temporibus ullam rem doloribus maiores molestiae possimus accusamus voluptatibus? Dolore obcaecati ad iusto impedit ipsum deserunt aspernatur nobis possimus architecto, perspiciatis consectetur voluptas eum ullam commodi excepturi, inventore assumenda officiis? Est cumque velit unde laborum expedita numquam quo esse nesciunt maxime fuga, aspernatur culpa quaerat, alias nam sapiente ex labore nulla hic atque consequuntur vel consectetur vero? Soluta, voluptate ab.</p>
+                <h1>Comandos del dia a dia con Git y GitHub</h1>
+                <hr>
+                <h3>Crear un repositorio nuevo:</h3>
+                <ol>
+                    <li>Crea un directorio nuevo, abrelo y ejecutalo</li>
+                    <li>Utiliza el comando $git init</li>
+                </ol>
+                <h3>Una lista que no puedes olvidar</h3>
+                <ul>
+                    <li>$git status</li>
+                    <dt>Muestra el estado de actual de los archivos ubicados en el área de staging</dt>
+                </ul>
+                <ul>
+                    <li>$git commit -m "descripcion commit"</li>
+                    <dt>Agrega los cambios a la BD del repositorio de git</dt>
+                </ul>
+                <ul>
+                    <li>$git commit -am "Descripción commit"</li>
+                    <dt>Nos ahorra el tener que utilizar git commit ., este comando solo es válido para archivos que ya existen en el repositorio, no afectará a archivos nuevos que no hayan sido agregados con $ git add</dt>
+                </ul>
+                <ul>
+                    <li>$git commit</li>
+                    <dt>Abrirá el editor Vim para poder agregar un comentario, siempre es obligatorio agregar un comentario para el commit. Para poder editar el comit usar "ESC i". Para guardar cambios ESC + SHIFT + Z Z</dt>
+                </ul>
+                <ul>
+                    <li>$git log</li>
+                    <dt>Muestra el historial detallado con commit e id, de todos los commits en dicho repositorio</dt>
+                </ul>
+                <ul>
+                    <li>$git log (repotenciado)</li>
+                    <dt> Para tener una visualización más gráfica de tu historial en un repositorio, puedes usar el comando $git log --all -decorate- oneline con esto, podrás ver el historial de cambios y ramas de forma más gráfica.</dt>
+                </ul>
+                <ul>
+                    <li>$git log para buscar</li>
+                    <dt>si deseas buscar palabras que hayas dejado en tus commits, puedes usar git log -S palabra, esto te retornará todos los commits que incluyan la palabra a buscar.</dt>
+                </ul>
+                <ul>
+                    <li>$git diff</li>
+                    <dt>Permite ver las diferencias entre el staging y nuestro archivo en local. tiene las variaciones git diff id1 id2 donde se comparan dos versiones según los id del commit seleccionado. y git diff --stat donde ves las diferencias más resumidas.</dt>
+                </ul>
+                <ul>
+                    <li>$git show</li>
+                    <dt>Se utiliza para ver el commit y la rama en el que te encuentras actualmente.
+                    </dt>
+                </ul>
+                <ul>
+                    <li>$git greep</li>
+                    <dt> se usa para buscar texto en nuestros archivos del repositorio, puedes ver la cantidad de veces que se usa una palabra, incluso incluir expresiones regulares. Un ejemplo sería usar git gre -n palabra para ver en que archivos y que líneas esta la palabra "palabra" o git grep -c palabra para ver la cantidad de veces que se repite la palabra "palabra"</dt>
+                </ul>
+                <h3>Comandos de configuración</h3>
+                <ul>
+                    <li>$git config --global user.name "Nombre"</li>
+                    <dt>Configura nombre usuario</dt>
+                </ul>
+                <ul>
+                    <li>$git config --global user.email "email"</li>
+                    <dt>Configura email de usuario</dt>
+                </ul>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime magnam cum praesentium, temporibus itaque ad, incidunt iste facilis accusantium reiciendis dolorem. Temporibus ut quis atque laborum quod deserunt culpa eligendi consectetur odit nesciunt corporis id assumenda esse voluptates quibusdam nostrum, magnam dignissimos tenetur tempora? Laborum a non nobis illum inventore excepturi, porro placeat incidunt cupiditate rem dolorem? Tenetur delectus aliquid eius tempore saepe sed eaque obcaecati veniam non omnis. Quasi illum id quis nesciunt, atque saepe, nostrum reiciendis ex aut aperiam similique facere aspernatur laboriosam quos. Alias, a aliquam doloribus odio delectus voluptatibus illo nemo atque labore eveniet incidunt cum, dolorem sunt enim laudantium tempora ut debitis aperiam modi optio, cumque doloremque quidem unde id! Quod ad sapiente id? Ipsam nesciunt officiis voluptas autem pariatur! Quos est porro eaque animi eveniet quia beatae voluptates tenetur nam odio inventore id dolorum vero, ducimus odit fugit voluptatum molestias dolores ipsum. Totam, blanditiis.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste repellendus laudantium a odio, voluptatem quasi quae quam perferendis eveniet magni eaque veritatis accusamus vitae assumenda ipsa reiciendis id commodi corporis? Culpa, tempora amet est quae sunt similique, deserunt quis architecto necessitatibus ex voluptatum reprehenderit veniam sed dolores voluptatibus voluptatem. Quia, ullam. Quae mollitia sequi accusamus, consectetur ipsa reiciendis aspernatur. Velit mollitia quae possimus! Voluptatum velit a veritatis dolor delectus consectetur officia quod ducimus facilis labore explicabo eos sapiente eveniet facere aliquam quos temporibus, libero repellat fugit ratione soluta tenetur. Magnam pariatur unde doloremque eligendi, repudiandae doloribus a perspiciatis temporibus magni aut odit maiores debitis necessitatibus inventore iusto. Quos ipsum perferendis exercitationem maxime iure similique, quam ut esse, quidem rerum eum eveniet officia quasi placeat animi. Repellendus tempore quos natus accusamus itaque minima cupiditate omnis a provident quas commodi, ut iste exercitationem impedit, quae quaerat debitis necessitatibus ducimus accusantium perferendis blanditiis non deserunt. Numquam impedit eum sed temporibus totam reiciendis quam unde eveniet ea cumque iusto aut vitae harum non velit aliquam blanditiis mollitia excepturi at, nihil hic dolorum! Aspernatur, deleniti odit officia asperiores fuga minima eveniet temporibus a eos consectetur et omnis molestiae quod ipsa culpa! Maxime, tenetur velit! Quidem est laborum aliquam similique ipsum ab autem, expedita fuga laboriosam repellendus fugit quibusdam officiis eaque debitis ducimus aperiam exercitationem odio suscipit cupiditate amet itaque! Atque similique et cum pariatur praesentium eum veniam corrupti distinctio voluptatum totam ipsa dolorum, quidem deleniti, accusamus numquam illo reprehenderit quibusdam doloribus, placeat dolor illum alias asperiores facilis magni? Omnis asperiores eveniet unde at! Perferendis placeat necessitatibus, natus sequi odit aliquid nesciunt dolor atque eaque inventore repellendus, illum eum? Nisi, dicta officiis. Sint rerum enim praesentium animi ipsum? Voluptatum officiis necessitatibus mollitia cupiditate laborum fugit earum tempora, cum amet illum ab sint pariatur quas cumque in!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aperiam alias nihil suscipit architecto ut eos velit magni modi hic iste iusto omnis in earum perspiciatis accusantium, laborum quos, tempora nobis ipsa obcaecati optio. Repudiandae molestiae quae aut ullam sed, at ea similique facilis, accusantium doloribus nulla quia minima cupiditate consectetur animi, doloremque asperiores nam suscipit maiores aliquam quas numquam ab eveniet. Inventore sequi magnam facere vitae omnis atque ipsam debitis obcaecati expedita. Dolorum dolor soluta ea in voluptatibus sequi ipsam, eveniet commodi totam rem voluptates quos repellendus tempora labore dicta officia placeat minus deserunt repudiandae aspernatur facere quisquam harum.</p>
