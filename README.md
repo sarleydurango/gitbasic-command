@@ -24,4 +24,4 @@ El pull trae los cambios de nuestro repositorio remoto y los actualiza al reposi
 5. git remote add origin [URL DEL REPOSITORIO EN GITHUB]
 6. git push origin master : Es el nombre que se le pone al repositorio remoto al que se conecta.
 
-Puedes conocer mas acerca de esta guia, visitando el repositorio o <a href="lawebdegit.xyz">lawebdegit.xyz</a> 
+Puedes conocer mas acerca de esta guia, visitando el repositorio o <a href="https://lawebdegit.xyz">lawebdegit.xyz</a> 
