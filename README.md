@@ -1,4 +1,4 @@
-### Guia Basica de Git y GitHub
+### Guía Básica de Git y GitHub
 
 Git es el mejor sistema de control de versiones del mundo y con esta guía básica aprenderás comandos simples para poder empezar a trabajar con tu equipo y subir tus proyectos de forma fácil y rápida.
 En este post hablaremos de que es Git y Github, además de como usar la terminal de Git Bash para los usuarios de Windows y así poder trabajar colaborativamente con tu equipo.
@@ -24,4 +24,4 @@ El pull trae los cambios de nuestro repositorio remoto y los actualiza al reposi
 5. git remote add origin [URL DEL REPOSITORIO EN GITHUB]
 6. git push origin master : Es el nombre que se le pone al repositorio remoto al que se conecta.
 
-Puedes conocer mas acerca de esta guia, visitando el repositorio o <a href="https://lawebdegit.xyz">lawebdegit.xyz</a> 
+Puedes conocer mas acerca de esta guía, visitando el repositorio o <a href="https://lawebdegit.xyz">lawebdegit.xyz</a> 
