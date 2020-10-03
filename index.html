@@ -135,9 +135,33 @@
                     <p>Para visualizar todo el historial de git, aunque lo hayamos eliminado, usamos el comando git reflog con este, podemos ver las referencias de los commit e ir y venir entre las distintas versiones con git RESET</p>
                     <p><strong>Recordatorio:</strong> ¡GIT RESET es una mala práctica! Solo usarlo en casos de extrema emergencia y como última opción.</p>
                 </ul>
+                <h3>Comandos en ramas</h3>
+                <p>Estos son los comandos aplicados para manejarse entre ramas, crear nuevas ramas, etc.</p>
                 <ul>
-                    <li class="block-create code p">$git rm --cached</li>
-                    <dt>Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.</dt>
+                    <li class="block-create code p">$git branch nameBranch</li>
+                    <dt>Se utiliza para crear una nueva rama.</dt>
+                </ul>
+                <ul>
+                    <li class="block-create code p">$git checkout nameBranch</li>
+                    <dt>Se utiliza para dirigirse hacia la rama elegida.</dt>
+                </ul>
+                <ul>
+                    <li class="block-create code p">$git branch -D nombreRama</li>
+                    <dt>Se utiliza para eliminar ramas en git.</dt>
+                </ul>
+                <ul>
+                    <li class="block-create code p">$git push origin nombreRama</li>
+                    <dt>Se utiliza para enviar a un repositorio remoto la rama que hemos creado</dt>
+                </ul>
+                <ul>
+                    <li class="block-create code p">$git merge nombreRama</li>
+                    <dt>Este comando es súper importante, se utiliza cuando quieres unir los cambios entre 2 ramas.
+                        Cuando tienes los cambios de una nueva que creaste y ya les hiciste commit, puedes hacer un merge para fusionarlos con tu rama de master. El proceso puede ser MASTER -> RAMA_NUEVA o RAMA_NUEVA -> MASTER. Cuando quieres dejar todo en master para tener todo en la rama principal, debe usar la segunda opción.</dt>
+                </ul>
+                <ul>
+                    <li><strong>Conflictos</strong></li>
+                    <dd> En GIT, los conflictos aparecen cuando existen diferencias en las mismas líneas de código de los archivos. Ya sea que un compañero modifico la misma línea de un archivo CSS que tú y tienen diferentes cosas.
+                        Los conflictos son fáciles de solucionar y no debe generarte caos ni confusión. La consola de GIT te indicará el estatus del merge que intentaste realizar.</dd>
                 </ul>
             </div>
         </main>
