@@ -168,7 +168,41 @@
                     <dt>indicará un merge correcto y CONFLICT (Content) archivo.extension indicará un conflicto.</dt>
                     <p><img src="https://i.imgur.com/4d9lsvn.jpg" width="100%" title="Hacer un checkout"></p>
                 </ul>
-
+                <p>Al revisar nuestro archivo en conflicto, encontraremos algo muy peculiar en el, GIT nos muestra exactamente cual fue la línea en conflictos y cuales son las diferencias entre nuestra rama actual y la que queremos obtener. Así se debe ver al usar el bloc de notas:</p>
+                <p><img src="https://i.imgur.com/sG9xd61.jpg" width="100%" title="conflicto al hacer merge"></p>
+                <br>
+                <p>Debemos elegir entre el código que deseamos dejar en el repositorio y para esto, debemos comunicarnos con la persona que escribió el código (si es que estamos trabajando colaborativamente con alguien más) para decidir que código debe irse a la versión del merge. Posterior a este paso, se deben comentar la línea de "<<<<", las de "====" y las de ">>>>" junto con el código que no irá al repositorio.
+                    Se deben guardar los cambios en el archivo y realizar un nuevo <strong>git add</strong> . además de un <strong>git commit -m "Comentario relacionado con la solución del conflicto en el merge"</strong></p>
+                <ul>
+                    <li><strong>Adicional</strong></li>
+                    <dd>Si usas VSCode, podrás ver que el te da una sugerencia de que hacer con los cambios:</dd>
+                    <p><img src="https://i.imgur.com/wqc6Z8n.jpg" width="100%" title="VSCode"></p>
+                    <p>Si eliges Accept Current Change estarás dejando los cambios de la rama actual, en cambio, si elgies <strong>Accept Incoming Change</strong> estarás obteniendo los cambios de la rama desde la cual estás obteniendo los cambios</p>
+                </ul>
+                <ul>
+                    <li><strong>Publicar ramas en repositorio remotos</strong></li>
+                    <dt>Si deseas que tu rama pueda ser usada/visualizada por otros desarrolladores en un repositorio remoto, debes usar el comando <strong> git push origin nombreRama</strong></dt>
+                </ul>
+                <h3>Repositorios remotos en GitHub</h3>
+                <p>Conoceremos como poder conectar nuestro repositorio local con algún repositorio remoto, subir nuestros cambios a dicho repositorio, obtener los cambios desde el repositorio y mucho más.</p>
+                <p>Para este caso de prueba utilizaremos el repositorio remoto más conocido del mundo, GitHub.</p>
+                
+                <ol>
+                    <li>Primero, debemos crearnos una cuenta en GitHub y crear un nuevo repositorio. Preferiblemente, debemos crear el archivo README ya que a través de el podremos indicarle a otros desarrolladores de que va nuestro código.</li>
+                    <br>
+                    <li>Luego de crear el repositorio, Github nos dará la url del mismo, esta la utilizaremos para agregar este origen remoto desde nuestro repositorio local. Se debe copiar la ruta HTTPS que github nos dió:</li>
+                    <br>
+                    <p><img src="https://i.imgur.com/yHnm1Y7.jpg" width="50%" title="crear el repositorio"></p>
+                    <br>
+                    <li>Usar el comando git remote add origin urlRepositorioRemoto con esto, estaremos agregando la referencia del repositorio remoto a nuestro repositorio en local. Posterior a esto, la consola de git no arrojará ningún mensaje, pero si usamos el comando git remove -v podremos visualizar el repositorio remoto al que hacemos referencia actualmente.</li>
+                    <p><img src="https://i.imgur.com/F0Gt37L.jpg" width="100%" title="git remote"></p>
+                    <p>Te dejo la url de este mismo repositorio para que puedas probar:<a href="https://github.com/sarleydurango/gitbasic-command.git">https://github.com/sarleydurango/gitbasic-command.git</a></p>
+                    <br>
+                    <li>Como ya tenemos la referencia del repositorio remoto, ahora debemos obtener la historia que se encuentre en dicho repositorio, esta acción se debe realizar siempre antes de enviar los cambios desde el repositorio local.</li>
+                    <p>Si el repositorio remoto es diferente a nuestro repositorio local, es probable que Git nos de un warning con el mensaje "refusing to merge unrelated histories" esto quiere decir que no puede hacer la fusión debido a que las historias de los dos repositorios son diferentes. Para forzar esta acción y poder obtener la historia del repositorio remoto debemos usar el comando <strong> git pull origin master --allow-unrelated-histories</strong> para permitir unir ambas historias.</p>
+                    <p><img src="https://i.imgur.com/jXyKWyQ.jpg" width="50%" title="git pull origin master"></p>
+                    <li>Con el comando ls -al podremos ver el archivo README creado desde GitHub. Y al ejecutar git log también veremos el commit hecho en GitHub para dicho archivo.</li>
+                </ol>
             </div>
         </main>
         <footer class="footer">
