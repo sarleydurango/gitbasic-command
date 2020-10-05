@@ -202,6 +202,12 @@
                     <p>Si el repositorio remoto es diferente a nuestro repositorio local, es probable que Git nos de un warning con el mensaje "refusing to merge unrelated histories" esto quiere decir que no puede hacer la fusión debido a que las historias de los dos repositorios son diferentes. Para forzar esta acción y poder obtener la historia del repositorio remoto debemos usar el comando <strong> git pull origin master --allow-unrelated-histories</strong> para permitir unir ambas historias.</p>
                     <p><img src="https://i.imgur.com/jXyKWyQ.jpg" width="50%" title="git pull origin master"></p>
                     <li>Con el comando ls -al podremos ver el archivo README creado desde GitHub. Y al ejecutar git log también veremos el commit hecho en GitHub para dicho archivo.</li>
+                    <p><img src="https://i.imgur.com/A6fLh4j.jpg" width="100%" title="Comandos ls"></p>
+                    <li>Ahora, para subir los cambios locales al repositorio, debemos usar el comando git push origin master, con esto, ya nuestros cambios locales estarán dentro del repositorio remoto. Recordar siempre que este comando lo debemos ejecutar desde la rama master para no generar conflictos.</li>
+                    <p><img src="https://i.imgur.com/QE64iWT.jpg" width="100%" title="Haciendo un git push"></p>
+                    <br>
+                    <p>Así quedó nuestro repositorio remoto en GitHub luego de agregar los cambios desde el repositorio local</p>
+                    <p><img src="https://i.imgur.com/fHIKEhY.jpg" width="100%" title="Repositorio en GitHub"></p>
                 </ol>
             </div>
         </main>
