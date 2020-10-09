@@ -244,7 +244,16 @@
                             git remote set-url origin url-ssh-del-repositorio-en-github
                             Con esto estaremos cambiando la url del repositorio en github. Podemos comprobar la nueva url usando git remove -v</li>
                         <li>Ahora puedes hacer un git pull origin master confirmar los mensajes, realizar cambios en tu repositorio local y hacer un git push origin master</li>
+
                 </ol>
+                <h3>Tags y versiones en Git y GitHub</h3>
+                <p>Los tags nos permiten asignar versiones a los commits con cambios más importantes o significativos en nuestro proyecto. A continuación, se presentan los comandos para trabajar con las etiquetas:</p>
+                <li>Crear un tag: antes de crear un tag se debe elegir el commit el cual queremos identificar, para esto, podemos hacer un:
+
+                    git log --all --graph --decorate --oneline o un git log --all --oneline y copiar el id del commit.
+                    
+                    Se usan los comandos anteriores para poder obtener el id más corto.
+                    Luego, ejecutamos el comando para crear el tag git tag -a nombreDelTag -m "Comentario asociado al tag" idDelCommit</li>
             </div>
         </main>
         <footer class="footer">
