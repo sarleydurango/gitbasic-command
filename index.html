@@ -230,6 +230,20 @@
                 <p>Luego de haber creado y configurado nuestra llave privada. Debemos configurar nuestra llave pública (la única que podemos compartir) con Github. Es importante tener en cuenta que debemos realizar los pasos anteriores, de lo contrario, no podremos continuar con este paso.</p>
                 <ol>
                     <li>Como primer paso: debemos agregar nuestra llave pública a nuestra cuenta de Github. Para eso debemos copiar el contenido de nuestra llave publica, ubicada en el archivo id_rsa.pub</li>
+                    <br>
+                    <li>El segundo paso es: Ingresar en nuestra cuenta de Github y dirigirnos a la configuración y posteriormente a la gestion de KEYS SSH
+                        url: https://github.com/settings/keys
+                        Debemos hacer click en New SSH Key
+                        </li>
+                        <p><img src="https://i.imgur.com/QxiOehy.jpg" width="80%" title="Configurar llaves SSH"></p>
+                        <p>y luego agregar como título, el pc que tendrá asignado dicha key publica, esto es para poder identificarlo, ya que podemos tener varios equipos conectados por SSH a nuestros repositorios. Al finalizar, hacer click en Add SSH KEY</p>
+                        <p><img src="https://i.imgur.com/fWV5iWb.jpg" width="80%" title="Configurando llaves SSH"></p>
+                        <li>Ahora podremos ver que nuestra key SSH se agregó correctamente</li>
+                        <p><img src="https://i.imgur.com/r0K7wIg.jpg" width="80%" title="Configuración SSH terminada"></p>
+                        <li>Como siguiente paso, debemos configurar nuestro repositorio local para dejar de usar HTTPS y empezar a usar SSH con nuestras nuevas keys. Para esto, debemos ir a nuestro repositorio y ejecutar el comando
+                            git remote set-url origin url-ssh-del-repositorio-en-github
+                            Con esto estaremos cambiando la url del repositorio en github. Podemos comprobar la nueva url usando git remove -v</li>
+                        <li>Ahora puedes hacer un git pull origin master confirmar los mensajes, realizar cambios en tu repositorio local y hacer un git push origin master</li>
                 </ol>
             </div>
         </main>
