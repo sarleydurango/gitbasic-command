@@ -255,6 +255,12 @@
                 <li><strong>Visualizar tags creados:</strong> Para visualizar los tags que tenemos creados podemos usar los comandos git tag o git show-ref --tags con el primero, solo veremos el nombre del tag y con el segundo, podremos ver el commit generado al crear el tag y la ubicacion.</li>
                 <li><strong>Enviar tags a un repositorio remoto:</strong> Para publicar nuestros tags se debe usar el comando git push origin --tags si te das cuenta, se hace diferente a publicar un commit común.</li>
                 <li><strong>Eliminar tags:</strong> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos:</li>
+                <p>git tag -d nombreDelTag con esto estaremos borrando el tag en el repositorio local. Para eliminarlo del repositorio remoto se debe usar git push origin :refs/tags/nombreDelTag</p>
+                <h3>Usando Rebase</h3>
+                <p>Rebase se utiliza para unir los cambios que tengamos en una rama con nuestra rama master y no dejar rastros de la existencia de dicha rama creada.
+
+                    El rebase es útil, por ejemplo, si estamos realizando arreglos de un bug y no se desean mostrar estos cambios como tomados de una rama, si no como parte del flujo normal de la aplicación.</p>
+                <p>Rebase se encarga de ajustar los cambios al momento en que se realizaron y hacer un merge desde el primer commit, no desde el último (como funciona normalmente un flujo en git)</p>
             </div>
         </main>
         <footer class="footer">
