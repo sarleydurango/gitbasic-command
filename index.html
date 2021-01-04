@@ -263,15 +263,18 @@
 
                     El rebase es útil, por ejemplo, si estamos realizando arreglos de un bug y no se desean mostrar estos cambios como tomados de una rama, si no como parte del flujo normal de la aplicación.</p>
                 <p>Rebase se encarga de ajustar los cambios al momento en que se realizaron y hacer un merge desde el primer commit, no desde el último (como funciona normalmente un flujo en git)</p>
-                <li>Para hacer un rebase, primero debemos crear una nueva rama, posicionarnos en dicha rama con git checkout y realizar los cambios.</li>
-                <li>Luego de tener nuestros cambios, debemos ejecutar el comando git rebase master desde nuestra rama de cambios es importante que git rebase se haga desde la rama con los cambios primero</li>
-                <li>Con esto, ya tendremos unidas las historias de master con nuestra nueva rama. Posteior a esto se debe realizar checkout a mastery ejecutar el rebase desde master apuntando a nuestra rama de cambios git rebase nombreRamaCambios</li>
-                <li>Esto lo que hará es integrar master con nuestra rama de cambios y luego pasarla a master nuevamente con todos los cambios incluidos, como un merge.</li>
-                <li><strong>Nota:</strong> Usar rebase es una mala práctica, ya que no tenemos historia de lo que sucede, no se sabe quien hizo que cambios y en ocasiones, si master avanzó mucho, se pueden generar muchos conflictos.</li>
+                <ul>
+                    <li>Para hacer un rebase, primero debemos crear una nueva rama, posicionarnos en dicha rama con git checkout y realizar los cambios.</li>
+                    <li>Luego de tener nuestros cambios, debemos ejecutar el comando git rebase master desde nuestra rama de cambios es importante que git rebase se haga desde la rama con los cambios primero</li>
+                    <li>Con esto, ya tendremos unidas las historias de master con nuestra nueva rama. Posteior a esto se debe realizar checkout a mastery ejecutar el rebase desde master apuntando a nuestra rama de cambios git rebase nombreRamaCambios</li>
+                    <li>Esto lo que hará es integrar master con nuestra rama de cambios y luego pasarla a master nuevamente con todos los cambios incluidos, como un merge.</li>
+                    <li><strong>Nota:</strong> Usar rebase es una mala práctica, ya que no tenemos historia de lo que sucede, no se sabe quien hizo que cambios y en ocasiones, si master avanzó mucho, se pueden generar muchos conflictos.</li>
+                </ul>
                 <h3>Usando Git Stash</h3>
                 <p>Git stash es muy útil cuando tienes cambios que no deseas realizarle commits aún, o para realizar pruebas, experimentos que no requieran o no quieras crear una rama para poder visualizarlos</p>
                 <p>El stash es una forma de almacenar tus cambios pendientes para luego poder obtenerlos y hacerles commit, incluso puedes crear una rama con esos cambios pendientes, hacerle commit en la nueva rama y luego realizar un merge en master.</p>
-                <ul>Pasos para usar Stash:
+                <span>Pasos para usar Stash:</span>
+                <ul>
                     <li>Primero, puedes realizar cualquier cambio en un documento y guardar los cambios.</li>
                     <li>Luego, usar el comando git stash, esto guardará tus cambios pendientes en un listado de WIP (Work in Process).</li>
                     <li>El listado lo puedes consultar usando git stash list</li>
@@ -281,10 +284,22 @@
                 </ul>
                 <h3>Git Clean</h3>
                     <p>Este comando es utilizado para eliminar archivos que no forman parte de nuestro directorio de trabajo, archivos como .logs, resultados de una compilación, etc.</p>
-                    <li>Para eliminar dichos archivos podemos probar creando copias de archivos existentes en nuestro repositorio</li>
-                    <li>Luego, ejecutar git clean --dry-run esto se usa para verificar que eliminará git clean</li>
-                    <li>Al confirmar lo que borrará, ejecutamos git clean -f con esto, ya estaremos borrando dichos archivos</li>
-                    <li>Nota: Git no eliminará los archivos que se encuentren dentro del .gitignore, tampoco eliminará los archivos que tengan el mismo nombre, asi esten en directorios distintos.</li>
+                    <ul>
+                        <li>Para eliminar dichos archivos podemos probar creando copias de archivos existentes en nuestro repositorio</li>
+                        <li>Luego, ejecutar git clean --dry-run esto se usa para verificar que eliminará git clean</li>
+                        <li>Al confirmar lo que borrará, ejecutamos git clean -f con esto, ya estaremos borrando dichos archivos</li>
+                        <li>Nota: Git no eliminará los archivos que se encuentren dentro del .gitignore, tampoco eliminará los archivos que tengan el mismo nombre, asi esten en directorios distintos.</li>
+                    </ul>
+
+                    <div>
+                        <h3>Git cherry pick</h3>
+                        <span>Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.</span>
+                        <p>cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia.</p>
+                        <ul>
+                            <li>Para usar cherry pick, debes ejecutar el comando git cherry-pick IDCommit desde la rama donde deseas traer los cambios de dicho commit.</li>
+                            <li>Es posible que genere conflictos este comando, así que debes tenerlo en cuenta para poder hacer el cherry pick.</li>
+                        </ul>
+                    </div>
             </div>
         </main>
         <footer class="footer">
