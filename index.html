@@ -230,13 +230,11 @@
                 </ol>
                 <h3>Conectarnos a Github a través de SSH</h3>
                 <p>Luego de haber creado y configurado nuestra llave privada. Debemos configurar nuestra llave pública (la única que podemos compartir) con Github. Es importante tener en cuenta que debemos realizar los pasos anteriores, de lo contrario, no podremos continuar con este paso.</p>
-                <ol>
+                <ul>
                     <li>Como primer paso: debemos agregar nuestra llave pública a nuestra cuenta de Github. Para eso debemos copiar el contenido de nuestra llave publica, ubicada en el archivo id_rsa.pub</li>
-                    <br>
                     <li>El segundo paso es: Ingresar en nuestra cuenta de Github y dirigirnos a la configuración y posteriormente a la gestion de KEYS SSH
                         url: https://github.com/settings/keys
-                        Debemos hacer click en New SSH Key
-                        </li>
+                        Debemos hacer click en New SSH Key </li>
                         <p><img src="https://i.imgur.com/QxiOehy.jpg" width="80%" title="Configurar llaves SSH"></p>
                         <p>y luego agregar como título, el pc que tendrá asignado dicha key publica, esto es para poder identificarlo, ya que podemos tener varios equipos conectados por SSH a nuestros repositorios. Al finalizar, hacer click en Add SSH KEY</p>
                         <p><img src="https://i.imgur.com/fWV5iWb.jpg" width="80%" title="Configurando llaves SSH"></p>
@@ -247,16 +245,18 @@
                             Con esto estaremos cambiando la url del repositorio en github. Podemos comprobar la nueva url usando git remove -v</li>
                         <li>Ahora puedes hacer un git pull origin master confirmar los mensajes, realizar cambios en tu repositorio local y hacer un git push origin master</li>
 
-                </ol>
+                </ul>
                 <h3>Tags y versiones en Git y GitHub</h3>
                 <p>Los tags nos permiten asignar versiones a los commits con cambios más importantes o significativos en nuestro proyecto. A continuación, se presentan los comandos para trabajar con las etiquetas:</p>
-                <li><strong>Crear un tag:</strong> antes de crear un tag se debe elegir el commit el cual queremos identificar, para esto, podemos hacer un:
-                    git log --all --graph --decorate --oneline o un git log --all --oneline y copiar el id del commit.       
-                    Se usan los comandos anteriores para poder obtener el id más corto.
-                    Luego, ejecutamos el comando para crear el tag git tag -a nombreDelTag -m "Comentario asociado al tag" idDelCommit</li>
-                <li><strong>Visualizar tags creados:</strong> Para visualizar los tags que tenemos creados podemos usar los comandos git tag o git show-ref --tags con el primero, solo veremos el nombre del tag y con el segundo, podremos ver el commit generado al crear el tag y la ubicacion.</li>
-                <li><strong>Enviar tags a un repositorio remoto:</strong> Para publicar nuestros tags se debe usar el comando git push origin --tags si te das cuenta, se hace diferente a publicar un commit común.</li>
-                <li><strong>Eliminar tags:</strong> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos:</li>
+                <ul>
+                    <li><strong>Crear un tag:</strong> antes de crear un tag se debe elegir el commit el cual queremos identificar, para esto, podemos hacer un:
+                        git log --all --graph --decorate --oneline o un git log --all --oneline y copiar el id del commit.       
+                        Se usan los comandos anteriores para poder obtener el id más corto.
+                        Luego, ejecutamos el comando para crear el tag git tag -a nombreDelTag -m "Comentario asociado al tag" idDelCommit</li>
+                    <li><strong>Visualizar tags creados:</strong> Para visualizar los tags que tenemos creados podemos usar los comandos git tag o git show-ref --tags con el primero, solo veremos el nombre del tag y con el segundo, podremos ver el commit generado al crear el tag y la ubicacion.</li>
+                    <li><strong>Enviar tags a un repositorio remoto:</strong> Para publicar nuestros tags se debe usar el comando git push origin --tags si te das cuenta, se hace diferente a publicar un commit común.</li>
+                    <li><strong>Eliminar tags:</strong> Los tags son publicados en Github como releases, versiones estables de nuestro código que deberían funcionar sin problemas. Si llegas a publicar un tag por equivocación, puedes borrarlo con los siguientes dos comandos:</li>
+                </ul>
                 <p>git tag -d nombreDelTag con esto estaremos borrando el tag en el repositorio local. Para eliminarlo del repositorio remoto se debe usar git push origin :refs/tags/nombreDelTag</p>
                 <h3>Usando Rebase</h3>
                 <p>Rebase se utiliza para unir los cambios que tengamos en una rama con nuestra rama master y no dejar rastros de la existencia de dicha rama creada.
@@ -299,6 +299,15 @@
                             <li>Para usar cherry pick, debes ejecutar el comando git cherry-pick IDCommit desde la rama donde deseas traer los cambios de dicho commit.</li>
                             <li>Es posible que genere conflictos este comando, así que debes tenerlo en cuenta para poder hacer el cherry pick.</li>
                         </ul>
+                    </div>
+                    <div>
+                        <h3>Git amend</h3>
+                        <span>A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más.
+
+                         Amend remienda nuestro error y los cambios que hicimos nos los permite agregar al commit más reciente.</span>
+                         <ul>
+                             <li>Para esto, se debe hacer los cambios necesario, hacer un git add y posterior a esto, ejecutar el comando git commit --amend</li>
+                         </ul>
                     </div>
             </div>
         </main>
